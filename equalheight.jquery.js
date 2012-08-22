@@ -4,8 +4,8 @@
         var maxHeight = 0;
             
         this.each(function() {
-            if($(this).height() > maxHeight) {
-                maxHeight = $(this).height();
+            if($(this).outerHeight() > maxHeight) {
+                maxHeight = $(this).outerHeight();
             }
         });
         
