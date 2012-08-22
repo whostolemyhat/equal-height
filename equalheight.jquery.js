@@ -1,19 +1,20 @@
 (function($) {
     jQuery.fn.equalHeight = function() {
-        return this.each(function() {
-            var $this = $(this);
-
-            var maxHeight = 0;
-            $this.each(function() {
-                if($(this).height() > maxHeight) {
-                    maxHeight = $(this).height();
-                }
-            });
-            $this.each(function() {
-                $(this).height(maxHeight);
-            });
-
+        
+        var maxHeight = 0;
+            
+        this.each(function() {
+            if($(this).height() > maxHeight) {
+                console.log($(this).height() > maxHeight);
+                maxHeight = $(this).height();
+            }
         });
+        
+        this.each(function() {
+            $(this).height(maxHeight);
+        });
+
+        return this;
     }
 })(jQuery);
 
