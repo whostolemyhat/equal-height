@@ -5,7 +5,6 @@
             
         this.each(function() {
             if($(this).height() > maxHeight) {
-                console.log($(this).height() > maxHeight);
                 maxHeight = $(this).height();
             }
         });
